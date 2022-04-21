@@ -19,10 +19,13 @@ public class Question4
      
     Scanner in = new Scanner(System.in);
     int triangleBase = in.nextInt();
-    String character = "*";
+    char printChar = '*';
     
-    for (int end = 0; triangleBase > end ; triangleBase--) {
-      System.out.println(character.repeat(triangleBase));
-    }
+    for (int i = triangleBase; i > 0; i--) {
+      for (int j = i; j > 0; j--) {
+          System.out.print(printChar);
+      }
+      System.out.println();
+  }
   }
 }

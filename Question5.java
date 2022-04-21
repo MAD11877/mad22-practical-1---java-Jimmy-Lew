@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Question5
 {
@@ -28,28 +29,26 @@ public class Question5
      
     Scanner in = new Scanner(System.in);
 
-    int lengthOfSet = in.nextInt();
+    ArrayList<Integer> set = new ArrayList<Integer>();
 
-    int[] set = new int[lengthOfSet];
-
-    for (int i = 0; i < lengthOfSet; i++) {
+    for (int i = 0, lengthOfSet = in.nextInt(); i < lengthOfSet; i++) {
         int userInput = in.nextInt();
-        set[i] = userInput;
+        set.add(userInput);
     }
 
     System.out.println(mode(set));
   }
 
-  public static int mode(int[] numList) {
+  public static int mode(ArrayList<Integer> numList) {
     int mode = 0;
     int highestCount = 0;
 
-    for (int i = 0; i < numList.length; i++) {
-      int currentValue = numList[i];
+    for (int i : numList) {
+      int currentValue = i;
       int count = 1;
 
-      for (int j = 0; j < numList.length; j++) {
-        if (currentValue == numList[j]) {
+      for (int j : numList) {
+        if (currentValue == j) {
           count++;
         }
 
