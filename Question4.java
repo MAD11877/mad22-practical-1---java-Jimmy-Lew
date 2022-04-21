@@ -18,6 +18,12 @@ public class Question4
      */
      
     Scanner in = new Scanner(System.in);
+    int triangleBase = in.nextInt();
+    String character = "*";
     
+
+    for (int end = 0; triangleBase > end ; triangleBase--) {
+      System.out.println(character.repeat(triangleBase));
+    }
   }
 }

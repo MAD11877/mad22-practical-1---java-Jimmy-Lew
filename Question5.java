@@ -27,6 +27,36 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+
+    int lengthOfSet = in.nextInt();
+
+    int[] set = new int[lengthOfSet];
+
+    for (int i = 0; i < lengthOfSet; i++) {
+        int userInput = in.nextInt();
+        set[i] = userInput;
+    }
+
+    System.out.println(mode(set));
+  }
+
+  public static int mode(int[] numList) {
+    int mode = 0;
+    int highestCount = 0;
+
+    for (int i = 0; i < numList.length; i++) {
+      int currentValue = numList[i];
+      int count = 1;
+
+      for (int j = 0; j < numList.length; j++) {
+        if (count > highestCount) {
+          highestCount = count;
+          mode = currentValue;
+        }
+      }
+
+    }
+
+    return mode;
   }
 }
