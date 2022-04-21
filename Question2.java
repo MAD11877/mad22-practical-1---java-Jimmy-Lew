@@ -14,7 +14,7 @@ public class Question2
     double height = in.nextDouble();
     double weight = in.nextDouble();
 
-    double bmi = (weight * 2) / height;
+    double bmi = weight / (height * height);
 
     System.out.println(bmi);
   }
