@@ -49,6 +49,10 @@ public class Question5
       int count = 1;
 
       for (int j = 0; j < numList.length; j++) {
+        if (currentValue == numList[j]) {
+          count++;
+        }
+
         if (count > highestCount) {
           highestCount = count;
           mode = currentValue;
